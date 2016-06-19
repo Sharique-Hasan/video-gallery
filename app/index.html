@@ -6,17 +6,21 @@
   <!-- build:css styles/main.css -->
   <!-- bower:css -->
   <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
+  <link rel="stylesheet" href="bower_components/videogular-themes-default/videogular.css" />
+  <link rel="stylesheet" href="bower_components/toastr/toastr.css" />
   <!-- endbower -->
   <link rel="stylesheet" href="styles/css/main.css"/>
+  <link rel="stylesheet" href="styles/css/style.css"/>
+  <link rel="stylesheet" href="styles/css/responsive.css"/>
   <!-- endbuild -->
 </head>
 
   <body class="container">
-    <h3> ngSuper Generator </h3>
     <div ui-view></div>
   </body>
 
   <!-- build:js scripts/app.js -->
+  <script src="src/common/dash.all.min.js"></script>
   <!-- bower:js -->
   <script src="bower_components/jquery/dist/jquery.js"></script>
   <script src="bower_components/angular/angular.js"></script>
@@ -27,15 +31,26 @@
   <script src="bower_components/restangular/dist/restangular.js"></script>
   <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
   <script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+  <script src="bower_components/angular-inview/angular-inview.js"></script>
+  <script src="bower_components/ngInfiniteScroll/build/ng-infinite-scroll.js"></script>
+  <script src="bower_components/videogular/videogular.js"></script>
+  <script src="bower_components/videogular-controls/vg-controls.js"></script>
+  <script src="bower_components/videogular-poster/vg-poster.js"></script>
+  <script src="bower_components/videogular-dash/vg-dash.js"></script>
+  <script src="bower_components/videogular-overlay-play/vg-overlay-play.js"></script>
+  <script src="bower_components/toastr/toastr.js"></script>
   <!-- endbower -->
   <script src="src/core/core.module.js"></script>
   <script src="src/common/common.module.js"></script>
+  <script src="src/shell/shell.module.js"></script>
+  <script src="src/videos/videos.module.js"></script>
   <script src="src/app.module.js"></script>
   <script src="src/core/restangular.config.js"></script>
   <script src="src/core/router.config.js"></script>
   <script src="src/core/httpStatus.constant.js"></script>
   <script src="src/welcome/welcome.module.js"></script>
   <script src="src/welcome/welcome.controller.js"></script>
+  <script src="src/videos/video.controller.js"></script>
   <!-- endbuild -->
 
 </html>

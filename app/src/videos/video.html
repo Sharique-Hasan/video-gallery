@@ -1,0 +1,30 @@
+<div infinite-scroll="vm.loadMoreData()" in-view-container infinite-scroll-distance="0">
+  <div class="fix blog_feature_area" in-view="vm.inView($index, $inview, $inviewpart)" ng-repeat="config in vm.configs">
+    <div class="fix blog_feature">
+      <div class="fix feature_videos floatleft">
+        <div class="fix title">
+          <h3>{{config.title + $index }}</h3>
+        </div>
+        <videogular vg-theme="config.theme.url" vg-complete="vm.onComplete($index)" vg-player-ready="vm.onPlayerReady($API, $index)" vg-update-state="vm.onStateUpdate($state, $index)" vg-auto-play="config.autoPlay">
+          <vg-media vg-src="config.sources" vg-dash></vg-media>
+          <vg-controls>
+            <vg-play-pause-button></vg-play-pause-button>
+            <vg-time-display>{{ currentTime | date:'mm:ss':'+0000' }}</vg-time-display>
+            <vg-scrub-bar>
+              <vg-scrub-bar-current-time></vg-scrub-bar-current-time>
+            </vg-scrub-bar>
+            <vg-time-display>{{ timeLeft | date:'mm:ss':'+0000' }}</vg-time-display>
+            <vg-volume>
+              <vg-mute-button></vg-mute-button>
+              <vg-volume-bar></vg-volume-bar>
+            </vg-volume>
+            <vg-fullscreen-button></vg-fullscreen-button>
+          </vg-controls>
+
+          <vg-overlay-play></vg-overlay-play>
+          <vg-poster vg-url='config.plugins.poster'></vg-poster>
+        </videogular>
+      </div>
+    </div>
+  </div>
+</div>
