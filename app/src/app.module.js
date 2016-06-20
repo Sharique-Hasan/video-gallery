@@ -14,7 +14,6 @@
   /**
     * Application modules
   **/
-    'app.welcome',
     'app.shell',
     'app.videos'
   ]);
